@@ -338,12 +338,14 @@ search box - the end user will not know they are happening.
         var resdisplay = [
                 [
                     {
-                        "field": "author.name"
+                        "pre": "<br>",
+                        "field": "text",
+                        "post": "</br>"
                     },
                     {
-                        "pre": "(",
-                        "field": "year",
-                        "post": ")"
+                        "pre": "<b>",
+                        "field": "text",
+                        "post": "</b>"
                     }
                 ],
                 [
@@ -407,9 +409,9 @@ search box - the end user will not know they are happening.
             "search_url":"",
             "datatype":"jsonp",
             "initialsearch":true,
-            "fields": false,
+            /*"fields": true,*/
             "partial_fields": false,
-            "nested": [],
+            "nested": ["interaction.twitter"],
             "default_url_params":{},
             "freetext_submit_delay":"500",
             "q":"",
@@ -430,8 +432,8 @@ search box - the end user will not know they are happening.
             "post_search_callback": false,
             "pushstate": true,
             "linkify": true,
-            "default_operator": "OR",
-            "default_freetext_fuzzify": false
+            "default_operator": "AND",
+            "default_freetext_fuzzify": true
         };
 
 
