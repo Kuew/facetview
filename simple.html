@@ -23,6 +23,7 @@
             $('.facet-view-simple').facetview({
                 search_url: 'http://elastic.kuew.me:9200/testkuew_data/filter_data/_search?',
                 /*  search_index: 'testkuew_data',*/
+                fields: ["interaction.twitter", ],
                 facets: [
                     {'field': 'location',  'display': 'location'},
                     {'field': 'text', 'display': 'the tweet'},
